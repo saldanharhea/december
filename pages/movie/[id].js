@@ -20,7 +20,7 @@ export default function Movie() {
         <div className={styles.container}>
             {movieDetails ?
                 <div className={styles.main} style={{padding: 0}}>
-                    <div className={`banner-img ${styles.bannerImg}`}></div>
+                    <div style={{backgroundImage: `url(${movieDetails.poster})`}} className={styles.bannerImg}></div>
                     <h1> {movieDetails.title}</h1>
                     <p style={{lineHeight: '1.5em', padding: '0 2em'}}> {movieDetails.overview}</p>
                 </div>
@@ -30,10 +30,6 @@ export default function Movie() {
               .details {
                 line-height: 1.5em;
                 padding: 0.2em;
-              }
-
-              .banner-img {
-                background-image: url(${movieDetails.poster});
               }
             `}</style>
 
