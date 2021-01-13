@@ -1,8 +1,8 @@
-import {useEffect, useState} from "react";
-import Head from 'next/head'
+import React, {useEffect, useState} from "react";
 import styles from '../styles/Home.module.css';
 import {CardList} from '../components';
 import {getLatestMovies, getTrendingMovies} from './api/movie';
+
 
 const Home = () => {
     const [latestMovieList, setLatestMovieList] = useState([]);
@@ -15,7 +15,6 @@ const Home = () => {
 
             const trendingList = await getTrendingMovies();
             setTrendingMovieList(trendingList)
-            console.log(trendingList)
         };
         fetchData();
     }, []);
@@ -25,6 +24,7 @@ const Home = () => {
             <CardList title="Latest" movieList={latestMovieList}/>
             <CardList title="Trending" movieList={trendingMovieList}/>
         </div>
+
     )
 }
 
