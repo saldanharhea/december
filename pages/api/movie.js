@@ -64,7 +64,7 @@ const formatMovieResponse = (data) => {
         id: data.id,
         title: data.title,
         vote: data.vote_average,
-        poster: 'https://image.tmdb.org/t/p/w500/' + data.poster_path,
+        poster: data.poster_path ? 'https://image.tmdb.org/t/p/w500/' + data.poster_path: '',
         overview: data.overview,
     }
 }
