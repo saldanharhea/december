@@ -1,156 +1,84 @@
-.container {
-  min-height: 100vh;
-  padding-bottom:5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
-.main {
-  padding: 5rem;
-  position: absolute;
-  top:3em;
-  width: 100%;
-  overflow: auto;
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer img {
-  margin-left: 0.5rem;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
+        @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,600&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@580&display=swap');
+* {
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.title,
-.description {
-  text-align: center;
-}
-
-.bannerImg {
-  height: 50vh;
-  width: 100%;
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat;
-
-}
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
+body {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  font-family: "Cormorant Garamond", serif;
+  background: #4e337075;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-}
-
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
-
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-.header {
-  padding: 10px;
-  overflow: hidden;
+.rsvp-container {
+  content: "";
   position: absolute;
-  top:0;
-  width: 100%;
-  background-color: #343a40;
+  width: 100vw;
+  height: 100vh;
+  background: url(../bg.png) no-repeat;
+    background-position-x: center;
+    background-size: contain;
+  z-index: 3;
 }
 
-.headerLink {
-  float: left;
-  color: white;
-  text-align: center;
-  padding: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+.rsvp-inner-container {
+    min-height: 800px;
+    position: relative;
+    margin-left: 71px;
+    z-index: 4;
+    width: 74vw;
+    top: 130px;
+    background-color: #fcfcfc;
+    /* margin: auto; */
+    border: 2px solid #4e266f;
+    border-radius: 5px;
+    padding: 16px;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+h1 {
+  font-size: 28px;
+  font-weight: semi-bold;
+  margin: 30px 0 5px 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    color: #1b0429;
+}
+
+fieldset {
+  border: 0;
+  margin-bottom: 20px;
+}
+.directions {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    text-align: center;
+    color: #664987;
+    padding-bottom: 30px;
+}
+.locator {
+    padding-bottom: 30px;
+    border-bottom: 2px dashed grey;
+}
+.link {
+    font-size: 2rem;
+    font-style: italic;
+    position: relative;
+    bottom: 40px;
+    padding-right: 10px;
+    color: #7857a5;
+    font-weight: bold;
+    min-width: 218px;
+    display: inline-block;
+    width: 62%;
 }
