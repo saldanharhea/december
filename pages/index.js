@@ -44,7 +44,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url(./bg.png) no-repeat;
+  background: url(../bg.png) no-repeat;
     background-position-x: center;
     background-size: contain;
   z-index: 3;
